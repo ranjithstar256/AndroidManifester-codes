@@ -27,7 +27,8 @@
         <activity android:name=".DataTimePicker" />
         <activity android:name=".AudioVideoExample" />
         <activity android:name=".StartActivityForResultExample" />
-        <activity android:name=".ActivityLifeCycleExample"></activity>
+        <activity android:name=".ActivityLifeCycleExample" />
+        <activity android:name=".SimpleAlertDialog"></activity>
     </application>
 
 </manifest>

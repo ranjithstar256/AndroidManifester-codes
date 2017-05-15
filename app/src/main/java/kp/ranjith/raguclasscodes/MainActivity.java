@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
             arrayList.add("Date Time Picker");
             arrayList.add("Audio Video in Example");
             arrayList.add("Start Activity for Result Example");
+            arrayList.add("Alert and Custom Dialogs");
             arrayAdapter=new ArrayAdapter<String>(MainActivity.this,android.R.layout.simple_list_item_1,arrayList);
 
             lv.setAdapter(arrayAdapter);
@@ -65,6 +66,9 @@ public class MainActivity extends AppCompatActivity {
                             break;
                         case 7:
                             startActivity(new Intent(MainActivity.this,StartActivityForResultExample.class));
+                            break;
+                        case 8:
+                            startActivity(new Intent(MainActivity.this,SimpleAlertDialog.class));
                             break;
                     }
                 }
