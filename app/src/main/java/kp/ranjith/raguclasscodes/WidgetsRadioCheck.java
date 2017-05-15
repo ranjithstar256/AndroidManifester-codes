@@ -29,20 +29,18 @@ public class WidgetsRadioCheck extends AppCompatActivity {
                 id = radioGroup.getCheckedRadioButtonId();
 
                 switch (id) {
-//add the different coding for diffrent cases
+                //add the different coding for diffrent cases
                     case R.id.button:
 
                         break;
                     case R.id.button2:
-Toast.makeText(WidgetsRadioCheck.this, "changes", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(WidgetsRadioCheck.this, "changes", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.button3:
                         Toast.makeText(WidgetsRadioCheck.this, "Example", Toast.LENGTH_SHORT).show();
                         break;
 
                 }
-
-//                Toast.makeText(WidgetsRadioCheck.this, cb.isChecked()+"", Toast.LENGTH_SHORT).show();
 
                 if (cb.isChecked()) {
                     Toast.makeText(WidgetsRadioCheck.this, "checkbox checked", Toast.LENGTH_SHORT).show();

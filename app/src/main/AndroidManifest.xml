@@ -26,7 +26,8 @@
         <activity android:name=".WidgetsRadioCheck" />
         <activity android:name=".DataTimePicker" />
         <activity android:name=".AudioVideoExample" />
-        <activity android:name=".StartActivityForResultExample"></activity>
+        <activity android:name=".StartActivityForResultExample" />
+        <activity android:name=".ActivityLifeCycleExample"></activity>
     </application>
 
 </manifest>
