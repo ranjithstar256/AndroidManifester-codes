@@ -36,7 +36,7 @@ public class SimpleAlertDialog extends AppCompatActivity {
         TextView text = (TextView) dialog.findViewById(R.id.textDialog);
         text.setText("Custom dialog Android example by AndroidManifester");
         ImageView image = (ImageView) dialog.findViewById(R.id.imageDialog);
-        image.setImageResource(R.drawable.androidmanifester);
+        image.setImageResource(R.drawable.sivu);
 
         dialog.show();
 
