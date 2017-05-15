@@ -8,6 +8,15 @@
     android:layout_height="match_parent"
     tools:context="kp.ranjith.raguclasscodes.ListViewExample">
 
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:text="AndroidManifester Example Codes"
+        android:textColor="#7e35c2"
+        android:textSize="24sp" />
+
     <ListView
         android:id="@+id/idlistv"
         android:layout_width="match_parent"
