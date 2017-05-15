@@ -3,7 +3,8 @@
     package="kp.ranjith.raguclasscodes">
 
     <uses-permission android:name="android.permission.INTERNET" />
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -28,7 +29,9 @@
         <activity android:name=".AudioVideoExample" />
         <activity android:name=".StartActivityForResultExample" />
         <activity android:name=".ActivityLifeCycleExample" />
-        <activity android:name=".SimpleAlertDialog"></activity>
+        <activity android:name=".SimpleAlertDialog" />
+        <activity android:name=".WebviewExample" />
+        <activity android:name=".WifiBluetooth"></activity>
     </application>
 
 </manifest>
