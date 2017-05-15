@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
             arrayList.add("Start Activity for Result Example");
             arrayList.add("Alert and Custom Dialogs");
             arrayList.add("WebView Example");
+            arrayList.add("Turn On Off Wifi Bluetooth");
             arrayAdapter=new ArrayAdapter<String>(MainActivity.this,android.R.layout.simple_list_item_1,arrayList);
 
             lv.setAdapter(arrayAdapter);
@@ -73,6 +74,10 @@ public class MainActivity extends AppCompatActivity {
                             break;
                         case 9:
                             startActivity(new Intent(MainActivity.this,WebviewExample.class));
+                            break;
+
+                        case 10:
+                            startActivity(new Intent(MainActivity.this,WifiBluetooth.class));
                             break;
                     }
                 }
