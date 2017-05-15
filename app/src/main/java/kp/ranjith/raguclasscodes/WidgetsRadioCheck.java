@@ -37,7 +37,7 @@ public class WidgetsRadioCheck extends AppCompatActivity {
 
                         break;
                     case R.id.button3:
-
+                        Toast.makeText(WidgetsRadioCheck.this, "Example", Toast.LENGTH_SHORT).show();
                         break;
 
                 }
