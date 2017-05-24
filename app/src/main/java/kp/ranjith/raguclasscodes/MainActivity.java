@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_list_view_example);
             lv= (ListView) findViewById(R.id.idlistv);
+
+
             arrayList=new ArrayList<String>();
             arrayList.add("Simple Button Click Event");
             arrayList.add("Getting data from EditText");
@@ -34,6 +36,16 @@ public class MainActivity extends AppCompatActivity {
             arrayList.add("Alert and Custom Dialogs");
             arrayList.add("WebView Example");
             arrayList.add("Turn On Off Wifi Bluetooth");
+            arrayList.add("Gmap Find current Location");
+            arrayList.add("SharedPreference Example");
+
+            arrayList.add("Notification Example");
+            arrayList.add("Internal External Storage Example");
+            arrayList.add("Activity Life Cycle Example");
+            arrayList.add("Animation in Android");
+            arrayList.add("Sending Sms and Mail");
+            arrayList.add("Sensor Example");
+
             arrayAdapter=new ArrayAdapter<String>(MainActivity.this,android.R.layout.simple_list_item_1,arrayList);
 
             lv.setAdapter(arrayAdapter);
@@ -78,6 +90,27 @@ public class MainActivity extends AppCompatActivity {
 
                         case 10:
                             startActivity(new Intent(MainActivity.this,WifiBluetooth.class));
+                            break;
+                        case 11:
+                            startActivity(new Intent(MainActivity.this,MapsActivity.class));
+                            break;
+                        case 12:
+                            startActivity(new Intent(MainActivity.this,SharedPreferenceExample.class));
+                            break;
+                        case 13:
+                            startActivity(new Intent(MainActivity.this,NotificationExample.class));
+                            break;
+                        case 14:
+                            startActivity(new Intent(MainActivity.this,ActivityLifeCycleExample.class));
+                            break;
+                        case 15:
+                            startActivity(new Intent(MainActivity.this,AnimationInAndroid.class));
+                            break;
+                        case 16:
+                            startActivity(new Intent(MainActivity.this,SendingSmsMail.class));
+                            break;
+                        case 17:
+                            startActivity(new Intent(MainActivity.this,SensorsInAndroid.class));
                             break;
                     }
                 }
