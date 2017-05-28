@@ -10,7 +10,7 @@ import android.widget.ImageView;
 
 public class StartActivityForResultExample extends AppCompatActivity {
     ImageView imageView;
-    int REQUEST_CODE=123;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,14 +21,14 @@ public class StartActivityForResultExample extends AppCompatActivity {
 
     public void opencamm(View view) {
         Intent  intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        startActivityForResult(intent,REQUEST_CODE);
+        startActivityForResult(intent,66);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (REQUEST_CODE==123){
+        if (requestCode==66){
 
             Bitmap bitmap;
 

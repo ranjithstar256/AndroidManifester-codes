@@ -25,14 +25,14 @@ public class NotificationExample extends AppCompatActivity {
         // 4. initilaze NotifivstionManager
 
 
-        Intent  intent = new Intent(NotificationExample.this,MainActivity.class);
+        Intent  intent = new Intent(NotificationExample.this,NotificationExample.class);
 
         PendingIntent  pendingIntent = PendingIntent.getActivity(NotificationExample.this,0,intent,0);
 
         Notification notification = new Notification.Builder(NotificationExample.this).setSmallIcon(android.R.drawable.ic_media_play)
                 .setContentTitle("New message received")
                 .setContentIntent(pendingIntent)
-                .setContentText("message from harsha")
+                .setContentText("message from Ragu")
                 .build();
 
         NotificationManager  notificationManager = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);

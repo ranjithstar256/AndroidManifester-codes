@@ -59,7 +59,7 @@
     <Button
         android:id="@+id/button11"
         android:layout_width="match_parent"
-        android:onClick="sendmail"
         android:layout_height="wrap_content"
+        android:onClick="sendmail"
         android:text="send mail" />
 </LinearLayout>

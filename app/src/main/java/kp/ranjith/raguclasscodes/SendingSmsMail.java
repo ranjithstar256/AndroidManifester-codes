@@ -27,8 +27,11 @@ public class SendingSmsMail extends AppCompatActivity {
     public void sendsms(View view) {
         number=editText1.getText().toString();
         smsmsg=editText2.getText().toString();
+
         SmsManager smsManager =  SmsManager.getDefault();
+
         smsManager.sendTextMessage(number,null,smsmsg,null,null); //we need to add permission in manifest file to send sms
+
         Toast.makeText(this, "Sms Send successfully!", Toast.LENGTH_SHORT).show();
     }
 
@@ -39,6 +42,8 @@ public class SendingSmsMail extends AppCompatActivity {
 
 
         Intent email = new Intent(Intent.ACTION_SEND);
+
+
         email.putExtra(Intent.EXTRA_EMAIL, new String[]{ mailid});
         email.putExtra(Intent.EXTRA_SUBJECT, mailsub);
         email.putExtra(Intent.EXTRA_TEXT, mailmsg);

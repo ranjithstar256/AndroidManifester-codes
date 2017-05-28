@@ -22,7 +22,7 @@ public class AudioVideoExample extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_audio_video_example);
 
-        mediaPlayer = MediaPlayer.create(AudioVideoExample.this, R.raw.abc);
+        mediaPlayer = MediaPlayer.create(AudioVideoExample.this, R.raw.abc); /// audio file name small letter
         videoView = (VideoView) findViewById(R.id.videoView);
     }
 
@@ -46,8 +46,8 @@ public class AudioVideoExample extends AppCompatActivity {
     public void startvid(View view) {
 
         boolean internet = checkinternet(); // this is the coding for checking internet connection
-        if (internet) {
-            try {
+                if (internet) {
+                    try {
                 // Start the MediaController
 
                 MediaController mediacontroller = new MediaController(AudioVideoExample.this);
