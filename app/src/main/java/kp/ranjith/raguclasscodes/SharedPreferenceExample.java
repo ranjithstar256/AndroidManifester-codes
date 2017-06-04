@@ -1,5 +1,6 @@
 package kp.ranjith.raguclasscodes;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -20,7 +21,7 @@ public class SharedPreferenceExample extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_shared_preference_example);
 
         sharedPreferences=getSharedPreferences("sfname",MODE_PRIVATE);
         editor=sharedPreferences.edit();
@@ -37,11 +38,13 @@ public class SharedPreferenceExample extends AppCompatActivity {
 
         editor.putString("key1",s1);
         editor.putString("key2",s2);
+
+
         editor.commit();
 
+        startActivity(new Intent(SharedPreferenceExample.this,GetSharedPrefData.class));
 
         // once a data stored in shared preference , we can get from any activity!
-
         //lets get it from GetSharedPrefData  class
     }
 }
