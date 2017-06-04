@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
             arrayList.add("Animation in Android");
             arrayList.add("Sending Sms and Mail");
             arrayList.add("Sensor Example");
+            arrayList.add("Android Service");
 
             arrayAdapter=new ArrayAdapter<String>(MainActivity.this,android.R.layout.simple_list_item_1,arrayList);
 
@@ -111,6 +112,9 @@ public class MainActivity extends AppCompatActivity {
                             break;
                         case 17:
                             startActivity(new Intent(MainActivity.this,SensorsInAndroid.class));
+                            break;
+                        case 18:
+                            startActivity(new Intent(MainActivity.this,AndroidServiceExample.class));
                             break;
                     }
                 }
