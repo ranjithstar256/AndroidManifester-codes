@@ -23,23 +23,18 @@ public class WidgetsRadioCheck extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                int id;
-
-                id = radioGroup.getCheckedRadioButtonId();
-
+                int id = radioGroup.getCheckedRadioButtonId();
                 switch (id) {
                 //add the different coding for diffrent cases
                     case R.id.button:
-
+                        Toast.makeText(WidgetsRadioCheck.this, "btn1", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.button2:
-                        Toast.makeText(WidgetsRadioCheck.this, "changes", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(WidgetsRadioCheck.this, "btn2", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.button3:
-                        Toast.makeText(WidgetsRadioCheck.this, "Example", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(WidgetsRadioCheck.this, "btn3", Toast.LENGTH_SHORT).show();
                         break;
-
                 }
 
                 if (cb.isChecked()) {

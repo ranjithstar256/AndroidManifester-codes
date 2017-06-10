@@ -46,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
             arrayList.add("Sending Sms and Mail");
             arrayList.add("Sensor Example");
             arrayList.add("Android Service");
+            arrayList.add("Fragment Example");
+            arrayList.add("Fragment with Navigation");
 
             arrayAdapter=new ArrayAdapter<String>(MainActivity.this,android.R.layout.simple_list_item_1,arrayList);
 
@@ -88,7 +90,6 @@ public class MainActivity extends AppCompatActivity {
                         case 9:
                             startActivity(new Intent(MainActivity.this,WebviewExample.class));
                             break;
-
                         case 10:
                             startActivity(new Intent(MainActivity.this,WifiBluetooth.class));
                             break;
@@ -115,6 +116,12 @@ public class MainActivity extends AppCompatActivity {
                             break;
                         case 18:
                             startActivity(new Intent(MainActivity.this,AndroidServiceExample.class));
+                            break;
+                        case 19:
+                            startActivity(new Intent(MainActivity.this,FragmentsExample.class));
+                            break;
+                        case 20:
+                            startActivity(new Intent(MainActivity.this,NavigationActivity.class));
                             break;
                     }
                 }

@@ -82,7 +82,15 @@
         <service
             android:name=".MyService"
             android:enabled="true"
-            android:exported="true">
-        </service>
+            android:exported="true" />
+
+        <activity
+            android:name=".NavigationActivity"
+            android:label="@string/title_activity_navigation"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".GoogleMapsActivity"
+            android:label="@string/title_activity_google_maps"></activity>
     </application>
+
 </manifest>

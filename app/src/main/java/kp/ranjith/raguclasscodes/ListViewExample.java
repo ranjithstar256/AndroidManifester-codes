@@ -37,6 +37,22 @@ public class ListViewExample extends AppCompatActivity {
         arrayList.add("raju");
         arrayList.add("haran");
         arrayList.add("siva");
+        arrayList.add("ramu");
+        arrayList.add("somu");
+        arrayList.add("kumar");
+        arrayList.add("rajesh");
+        arrayList.add("suresh");
+        arrayList.add("raju");
+        arrayList.add("haran");
+        arrayList.add("siva");
+        arrayList.add("ramu");
+        arrayList.add("somu");
+        arrayList.add("kumar");
+        arrayList.add("rajesh");
+        arrayList.add("suresh");
+        arrayList.add("raju");
+        arrayList.add("haran");
+        arrayList.add("siva");
 
         arrayAdapter=new ArrayAdapter<String>(ListViewExample.this,android.R.layout.simple_list_item_1,arrayList);
 
@@ -45,7 +61,9 @@ public class ListViewExample extends AppCompatActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
                 Toast.makeText(ListViewExample.this, "You have selected "+arrayList.get(position), Toast.LENGTH_SHORT).show();
+
             }
         });
 

@@ -31,7 +31,6 @@ public class DataTimePicker extends AppCompatActivity {
         @Override
         public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
             Toast.makeText(DataTimePicker.this, year+"/"+month+"/"+dayOfMonth, Toast.LENGTH_SHORT).show();
-
         }
     };
 

@@ -65,4 +65,8 @@ public class SimpleButtonClickEventListener extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void aditya(View view) {
+
+    }
 }

@@ -14,7 +14,7 @@ import android.widget.VideoView;
 
 public class AudioVideoExample extends AppCompatActivity {
     VideoView videoView;
-    public static String MY_VIDEO = "http://www.ebookfrenzy.com/android_book/movie.mp4";
+    String MY_VIDEO = "http://www.ebookfrenzy.com/android_book/movie.mp4";
     MediaPlayer mediaPlayer;
 
     @Override
@@ -30,9 +30,6 @@ public class AudioVideoExample extends AppCompatActivity {
     public void startt(View view) {
 
         mediaPlayer.start();
-
-
-
     }
 
     public void pausee(View view) {
@@ -46,6 +43,7 @@ public class AudioVideoExample extends AppCompatActivity {
     public void startvid(View view) {
 
         boolean internet = checkinternet(); // this is the coding for checking internet connection
+
                 if (internet) {
                     try {
                 // Start the MediaController
