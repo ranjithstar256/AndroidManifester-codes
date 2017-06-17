@@ -40,7 +40,7 @@ public class WifiBluetooth extends AppCompatActivity {
         wifi.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                WifiManager wifi =(WifiManager)getSystemService(Context.WIFI_SERVICE);
+                WifiManager wifi =(WifiManager)getApplicationContext().getSystemService(Context.WIFI_SERVICE);
 
                 if(isChecked){
 

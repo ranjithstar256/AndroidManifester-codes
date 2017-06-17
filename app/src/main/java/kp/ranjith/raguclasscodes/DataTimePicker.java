@@ -9,21 +9,34 @@ import android.widget.DatePicker;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import is.arontibo.library.ElasticDownloadView;
+
 public class DataTimePicker extends AppCompatActivity {
 
     DatePickerDialog datePickerDialog;
     TimePickerDialog timePickerDialog;
 
+    ElasticDownloadView elasticDownloadView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data_time_picker);
+        elasticDownloadView= (ElasticDownloadView) findViewById(R.id.elastic_download_view);
+
+        elasticDownloadView.startIntro();
+
+        elasticDownloadView.setProgress(25);
     }
 
 
     public void datee(View view) {
         datePickerDialog=new DatePickerDialog(DataTimePicker.this,onDateSetListener,2010,0,06);
         datePickerDialog.show();
+
+        elasticDownloadView.success(); //This function moves the cursor to 100 if the progress has not been set already
+
+        elasticDownloadView.fail();
     }
 
 

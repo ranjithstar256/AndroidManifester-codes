@@ -12,10 +12,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:visibility="gone"
         android:inputType="textPersonName"
         android:text="http://" />
 
     <Button
+        android:visibility="gone"
         android:id="@+id/button10"
         android:layout_width="match_parent"
         android:onClick="india"

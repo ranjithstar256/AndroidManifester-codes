@@ -91,6 +91,7 @@
         <activity
             android:name=".GoogleMapsActivity"
             android:label="@string/title_activity_google_maps"></activity>
+        <activity android:name=".LoginActivity"></activity>
     </application>
 
 </manifest>

@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
             arrayList.add("Android Service");
             arrayList.add("Fragment Example");
             arrayList.add("Fragment with Navigation");
+            arrayList.add("SQLite Database! CURD operation");
 
             arrayAdapter=new ArrayAdapter<String>(MainActivity.this,android.R.layout.simple_list_item_1,arrayList);
 
@@ -106,22 +107,30 @@ public class MainActivity extends AppCompatActivity {
                             startActivity(new Intent(MainActivity.this,ActivityLifeCycleExample.class));
                             break;
                         case 15:
-                            startActivity(new Intent(MainActivity.this,AnimationInAndroid.class));
+                            startActivity(new Intent(MainActivity.this,InternalExternalStorage.class));
                             break;
                         case 16:
-                            startActivity(new Intent(MainActivity.this,SendingSmsMail.class));
+                            startActivity(new Intent(MainActivity.this,ActivityLifeCycleExample.class));
                             break;
                         case 17:
-                            startActivity(new Intent(MainActivity.this,SensorsInAndroid.class));
+                            startActivity(new Intent(MainActivity.this,AnimationInAndroid.class));
                             break;
                         case 18:
-                            startActivity(new Intent(MainActivity.this,AndroidServiceExample.class));
+                            startActivity(new Intent(MainActivity.this,SendingSmsMail.class));
                             break;
                         case 19:
-                            startActivity(new Intent(MainActivity.this,FragmentsExample.class));
+                            startActivity(new Intent(MainActivity.this,SensorsInAndroid.class));
                             break;
                         case 20:
+                            startActivity(new Intent(MainActivity.this,FragmentsExample.class));
+
+                            break;
+                        case 21:
                             startActivity(new Intent(MainActivity.this,NavigationActivity.class));
+                            break;
+                        case 22:
+
+                            startActivity(new Intent(MainActivity.this,LoginActivity.class));
                             break;
                     }
                 }
