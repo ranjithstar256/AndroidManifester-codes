@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
             arrayList.add("Fragment Example");
             arrayList.add("Fragment with Navigation");
             arrayList.add("SQLite Database! CURD operation");
+            arrayList.add("Web Based");
 
             arrayAdapter=new ArrayAdapter<String>(MainActivity.this,android.R.layout.simple_list_item_1,arrayList);
 
@@ -129,9 +130,11 @@ public class MainActivity extends AppCompatActivity {
                             startActivity(new Intent(MainActivity.this,NavigationActivity.class));
                             break;
                         case 22:
-
                             startActivity(new Intent(MainActivity.this,LoginActivity.class));
                             break;
+                        case 23:
+                            startActivity(new Intent(MainActivity.this,WebBased.class));
+
                     }
                 }
             });
