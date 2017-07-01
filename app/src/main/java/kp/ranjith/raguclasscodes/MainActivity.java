@@ -25,31 +25,31 @@ public class MainActivity extends AppCompatActivity {
 
 
             arrayList=new ArrayList<String>();
-            arrayList.add("Simple Button Click Event");
-            arrayList.add("Getting data from EditText");
-            arrayList.add("Passing Data Between Activity");
-            arrayList.add("ListView Example");
-            arrayList.add("Widgets Radio checkbox");
-            arrayList.add("Date Time Picker");
-            arrayList.add("Audio Video in Example");
-            arrayList.add("Start Activity for Result Example");
-            arrayList.add("Alert and Custom Dialogs");
-            arrayList.add("WebView Example");
-            arrayList.add("Turn On Off Wifi Bluetooth");
-            arrayList.add("Gmap Find current Location");
-            arrayList.add("SharedPreference Example");
+            arrayList.add("Simple Button Click Event");//0
+            arrayList.add("Getting data from EditText");//1
+            arrayList.add("Passing Data Between Activity");//2
+            arrayList.add("ListView Example");//3
+            arrayList.add("Widgets Radio checkbox");//4
+            arrayList.add("Date Time Picker");//5
+            arrayList.add("Audio Video in Example");//6
+            arrayList.add("Start Activity for Result Example");//7
+            arrayList.add("Alert and Custom Dialogs");//8
+            arrayList.add("WebView Example");//9
+            arrayList.add("Turn On Off Wifi Bluetooth");//10
+            arrayList.add("Gmap Find current Location");//11
+            arrayList.add("SharedPreference Example");//12
+            arrayList.add("Notification Example");//13
+            arrayList.add("Internal External Storage Example");//14
+            arrayList.add("Activity Life Cycle Example");//15
+            arrayList.add("Animation in Android");//16
+            arrayList.add("Sending Sms and Mail");//17
+            arrayList.add("Sensor Example");//18
+            arrayList.add("Android Service");//19
+            arrayList.add("Fragment Example");//20
+            arrayList.add("Fragment with Navigation");//21
+            arrayList.add("SQLite Database! CURD operation");//22
+            arrayList.add("Web Based");//23
 
-            arrayList.add("Notification Example");
-            arrayList.add("Internal External Storage Example");
-            arrayList.add("Activity Life Cycle Example");
-            arrayList.add("Animation in Android");
-            arrayList.add("Sending Sms and Mail");
-            arrayList.add("Sensor Example");
-            arrayList.add("Android Service");
-            arrayList.add("Fragment Example");
-            arrayList.add("Fragment with Navigation");
-            arrayList.add("SQLite Database! CURD operation");
-            arrayList.add("Web Based");
 
             arrayAdapter=new ArrayAdapter<String>(MainActivity.this,android.R.layout.simple_list_item_1,arrayList);
 
@@ -105,22 +105,22 @@ public class MainActivity extends AppCompatActivity {
                             startActivity(new Intent(MainActivity.this,NotificationExample.class));
                             break;
                         case 14:
-                            startActivity(new Intent(MainActivity.this,ActivityLifeCycleExample.class));
-                            break;
-                        case 15:
                             startActivity(new Intent(MainActivity.this,InternalExternalStorage.class));
                             break;
-                        case 16:
+                        case 15:
                             startActivity(new Intent(MainActivity.this,ActivityLifeCycleExample.class));
                             break;
-                        case 17:
+                        case 16:
                             startActivity(new Intent(MainActivity.this,AnimationInAndroid.class));
                             break;
-                        case 18:
+                        case 17:
                             startActivity(new Intent(MainActivity.this,SendingSmsMail.class));
                             break;
-                        case 19:
+                        case 18:
                             startActivity(new Intent(MainActivity.this,SensorsInAndroid.class));
+                            break;
+                        case 19:
+                            startActivity(new Intent(MainActivity.this,AndroidServiceExample.class));
                             break;
                         case 20:
                             startActivity(new Intent(MainActivity.this,FragmentsExample.class));
