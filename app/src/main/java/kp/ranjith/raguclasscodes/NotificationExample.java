@@ -70,4 +70,24 @@ public void showNotification(Context context, String title, String body, Intent 
         notificationManager.notify(0,notification);
 
     }
+    public void showNotification() {
+        NotificationManager notificationManager = (NotificationManager) MainActivity2.this.getSystemService(Context.NOTIFICATION_SERVICE);
+
+        int notificationId = 1;        String channelId = "channel-01";        String channelName = "Channel Name";        int importance = NotificationManager.IMPORTANCE_HIGH;
+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            NotificationChannel mChannel = new NotificationChannel(
+                    channelId, channelName, importance);
+            notificationManager.createNotificationChannel(mChannel);
+        }
+
+        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(MainActivity2.this, channelId)
+                .setSmallIcon(android.R.drawable.ic_media_play).setContentTitle("ITM Reopened").setContentText("Start coming to college!!");
+
+        Intent intent = new Intent(MainActivity2.this, MainActivity.class);
+        PendingIntent pendingIntent = PendingIntent.getActivity(MainActivity2.this, 0, intent, 0);
+        mBuilder.setContentIntent(pendingIntent);
+
+        notificationManager.notify(notificationId, mBuilder.build());
+    }
 }
