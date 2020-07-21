@@ -35,9 +35,7 @@ public class SimpleAlertDialog extends AppCompatActivity {
         // set values for custom dialog components - text, image and button
         TextView text = (TextView) dialog.findViewById(R.id.textDialog);
         text.setText("Custom dialog Android example by AndroidManifester");
-        ImageView image = (ImageView) dialog.findViewById(R.id.imageDialog);
-        image.setImageResource(R.drawable.sivu);
-
+       
         dialog.show();
 
         Button declineButton = (Button) dialog.findViewById(R.id.declineButton);
