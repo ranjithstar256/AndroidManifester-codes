@@ -2,20 +2,21 @@ package kp.ranjith.raguclasscodes;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class PassingDataBwActivity extends AppCompatActivity {
-    EditText ed1,ed2;
-    String s1,s2;
+    EditText ed1, ed2;
+    String s1, s2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_passing_data_bw);
-        ed1= (EditText) findViewById(R.id.editText);
-        ed2= (EditText) findViewById(R.id.editText3);
+        ed1 = findViewById(R.id.editText);
+        ed2 = findViewById(R.id.editText3);
 
     }
 

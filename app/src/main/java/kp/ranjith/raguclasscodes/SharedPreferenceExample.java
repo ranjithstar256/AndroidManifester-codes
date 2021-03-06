@@ -3,9 +3,10 @@ package kp.ranjith.raguclasscodes;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class SharedPreferenceExample extends AppCompatActivity {
 
@@ -14,7 +15,7 @@ public class SharedPreferenceExample extends AppCompatActivity {
 
     SharedPreferences.Editor editor;
 
-    EditText ed1,ed2;
+    EditText ed1, ed2;
 
     String s1,s2;
 
@@ -23,11 +24,11 @@ public class SharedPreferenceExample extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shared_preference_example);
 
-        sharedPreferences=getSharedPreferences("sfname",MODE_PRIVATE);
-        editor=sharedPreferences.edit();
+        sharedPreferences = getSharedPreferences("sfname", MODE_PRIVATE);
+        editor = sharedPreferences.edit();
 
-        ed1= (EditText) findViewById(R.id.editText);
-        ed2= (EditText) findViewById(R.id.editText2);
+        ed1 = findViewById(R.id.editText);
+        ed2 = findViewById(R.id.editText2);
 
 
     }

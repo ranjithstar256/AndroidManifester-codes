@@ -1,12 +1,16 @@
 package kp.ranjith.raguclasscodes;
 
 import android.app.Notification;
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 
 public class NotificationExample extends AppCompatActivity {
 
@@ -14,40 +18,10 @@ public class NotificationExample extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification_example);
-showNotification(this, "", "", intent) ;
     }
 
-public void showNotification(Context context, String title, String body, Intent intent) {
-    NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
 
-    int notificationId = 1;
-    String channelId = "channel-01";
-    String channelName = "Channel Name";
-    int importance = NotificationManager.IMPORTANCE_HIGH;
-
-    if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-        NotificationChannel mChannel = new NotificationChannel(
-                channelId, channelName, importance);
-        notificationManager.createNotificationChannel(mChannel);
-    }
-
-    NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(context, channelId)
-            .setSmallIcon(R.mipmap.ic_launcher)
-            .setContentTitle(title)
-            .setContentText(body);
-
-    TaskStackBuilder stackBuilder = TaskStackBuilder.create(context);
-    stackBuilder.addNextIntent(intent);
-    PendingIntent resultPendingIntent = stackBuilder.getPendingIntent(
-            0,
-            PendingIntent.FLAG_UPDATE_CURRENT
-    );
-    mBuilder.setContentIntent(resultPendingIntent);
-
-    notificationManager.notify(notificationId, mBuilder.build());
-}
-
-    public void shownofn(View view) {
+    public void shownvofn(View view) {
 
         // 1. create a Intent
         // 2. create a PendingIntent
@@ -55,9 +29,9 @@ public void showNotification(Context context, String title, String body, Intent 
         // 4. initilaze NotifivstionManager
 
 
-        Intent  intent = new Intent(NotificationExample.this,NotificationExample.class);
+        Intent intent = new Intent(NotificationExample.this, NotificationExample.class);
 
-        PendingIntent  pendingIntent = PendingIntent.getActivity(NotificationExample.this,0,intent,0);
+        PendingIntent pendingIntent = PendingIntent.getActivity(NotificationExample.this, 0, intent, 0);
 
         Notification notification = new Notification.Builder(NotificationExample.this).setSmallIcon(android.R.drawable.ic_media_play)
                 .setContentTitle("New message received")
@@ -65,15 +39,19 @@ public void showNotification(Context context, String title, String body, Intent 
                 .setContentText("message from Ragu")
                 .build();
 
-        NotificationManager  notificationManager = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
+        NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
 
-        notificationManager.notify(0,notification);
+        notificationManager.notify(0, notification);
 
     }
-    public void showNotification() {
-        NotificationManager notificationManager = (NotificationManager) MainActivity2.this.getSystemService(Context.NOTIFICATION_SERVICE);
 
-        int notificationId = 1;        String channelId = "channel-01";        String channelName = "Channel Name";        int importance = NotificationManager.IMPORTANCE_HIGH;
+    public void shownofn(View view) {
+        NotificationManager notificationManager = (NotificationManager) NotificationExample.this.getSystemService(Context.NOTIFICATION_SERVICE);
+
+        int notificationId = 1;
+        String channelId = "channel-01";
+        String channelName = "Channel Name";
+        int importance = NotificationManager.IMPORTANCE_HIGH;
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             NotificationChannel mChannel = new NotificationChannel(
@@ -81,11 +59,11 @@ public void showNotification(Context context, String title, String body, Intent 
             notificationManager.createNotificationChannel(mChannel);
         }
 
-        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(MainActivity2.this, channelId)
+        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(NotificationExample.this, channelId)
                 .setSmallIcon(android.R.drawable.ic_media_play).setContentTitle("ITM Reopened").setContentText("Start coming to college!!");
 
-        Intent intent = new Intent(MainActivity2.this, MainActivity.class);
-        PendingIntent pendingIntent = PendingIntent.getActivity(MainActivity2.this, 0, intent, 0);
+        Intent intent = new Intent(NotificationExample.this, MainActivity.class);
+        PendingIntent pendingIntent = PendingIntent.getActivity(NotificationExample.this, 0, intent, 0);
         mBuilder.setContentIntent(pendingIntent);
 
         notificationManager.notify(notificationId, mBuilder.build());

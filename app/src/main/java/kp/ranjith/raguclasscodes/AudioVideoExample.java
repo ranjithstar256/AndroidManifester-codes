@@ -5,12 +5,13 @@ import android.media.MediaPlayer;
 import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.MediaController;
 import android.widget.Toast;
 import android.widget.VideoView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class AudioVideoExample extends AppCompatActivity {
     VideoView videoView;
@@ -23,7 +24,7 @@ public class AudioVideoExample extends AppCompatActivity {
         setContentView(R.layout.activity_audio_video_example);
 
         mediaPlayer = MediaPlayer.create(AudioVideoExample.this, R.raw.abc); /// audio file name small letter
-        videoView = (VideoView) findViewById(R.id.videoView);
+        videoView = findViewById(R.id.videoView);
     }
 
 

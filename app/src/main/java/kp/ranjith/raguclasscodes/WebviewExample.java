@@ -2,12 +2,13 @@ package kp.ranjith.raguclasscodes;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.EditText;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class WebviewExample extends AppCompatActivity {
     WebView webView;
@@ -18,12 +19,12 @@ public class WebviewExample extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_webview_example);
-        webView = (WebView) findViewById(R.id.webv);
-        editText = (EditText) findViewById(R.id.editText4);
+        webView = findViewById(R.id.webv);
+        editText = findViewById(R.id.editText4);
 
         webView.setWebViewClient(new WebViewClient());
 
-        webView.loadUrl("http://www.androidmanifester.com");
+        webView.loadUrl("https://www.androidmanifester.com");
 
         webView.setWebChromeClient(new WebChromeClient() {
             private ProgressDialog mProgress;
@@ -34,7 +35,7 @@ public class WebviewExample extends AppCompatActivity {
                     mProgress = new ProgressDialog(WebviewExample.this);
                     mProgress.show();
                 }
-                mProgress.setMessage("Loading " + String.valueOf(progress) + "%");
+                mProgress.setMessage("Loading " + progress + "%");
                 if (progress == 100) {
                     mProgress.dismiss();
                     mProgress = null;

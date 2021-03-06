@@ -1,7 +1,6 @@
 package kp.ranjith.raguclasscodes;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -9,14 +8,15 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 /**
  * A login screen that offers login via email/password.
  */
-public class LoginActivity extends AppCompatActivity  {
+public class LoginActivity extends AppCompatActivity {
 
 
-
-    EditText username, mPasswordView,ed3,ed4,ed5;
+    EditText username, mPasswordView, ed3, ed4, ed5;
     Button mEmailSignInButton;
     TextView t1;
     String s1,s2,s3,s4,s5;
@@ -28,16 +28,16 @@ public class LoginActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_login);
         // Set up the login form.
 
-        username = (EditText) findViewById(R.id.email);
-        mPasswordView = (EditText) findViewById(R.id.password);
-        ed3 = (EditText) findViewById(R.id.editText);
-        ed4 = (EditText) findViewById(R.id.editText2);
-        ed5 = (EditText) findViewById(R.id.editText3);
-        t1 = (TextView) findViewById(R.id.textView);
+        username = findViewById(R.id.email);
+        mPasswordView = findViewById(R.id.password);
+        ed3 = findViewById(R.id.editText);
+        ed4 = findViewById(R.id.editText2);
+        ed5 = findViewById(R.id.editText3);
+        t1 = findViewById(R.id.textView);
 
-        mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
+        mEmailSignInButton = findViewById(R.id.email_sign_in_button);
 
-        dbHelper=new DBHelper(LoginActivity.this);
+        dbHelper = new DBHelper(LoginActivity.this);
 
 
         mEmailSignInButton.setOnClickListener(new OnClickListener() {

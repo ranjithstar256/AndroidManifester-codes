@@ -15,7 +15,8 @@
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo"
@@ -23,6 +24,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ReCycleViewExpl"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -52,7 +54,7 @@
         <activity android:name=".FragmentsExample" />
         <activity android:name=".SharedPreferenceExample" />
         <activity android:name=".InternalExternalStorage" />
-        <activity android:name=".WebBased"></activity>
+        <activity android:name=".WebBased" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -91,8 +93,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".GoogleMapsActivity"
-            android:label="@string/title_activity_google_maps"></activity>
-        <activity android:name=".LoginActivity"></activity>
+            android:label="@string/title_activity_google_maps" />
+        <activity android:name=".LoginActivity" />
     </application>
 
 </manifest>

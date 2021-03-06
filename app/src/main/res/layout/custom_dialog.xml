@@ -13,12 +13,6 @@
         android:layout_toRightOf="@+id/imageDialog"
         android:text="Example Dialog"
         android:textColor="#000" />
-    <ImageView
-        android:id="@+id/imageDialog"
-        android:layout_width="wrap_content"
-        android:layout_height="300dp"
-        android:layout_marginRight="6dp"
-        android:src="@android:drawable/ic_media_play" />
 
     <TextView
         android:id="@+id/textDialog"

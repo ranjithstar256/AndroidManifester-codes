@@ -1,12 +1,13 @@
 package kp.ranjith.raguclasscodes;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class SimpleButtonClickEventListener extends AppCompatActivity {
 
@@ -18,7 +19,7 @@ public class SimpleButtonClickEventListener extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_simple_button_click_event_listener);
         // ITS VERY MUST!!! Always follow Initialization inside oncreate method
-        btn= (Button) findViewById(R.id.button);
+        btn = findViewById(R.id.button);
 
         //usage
         btn.setOnClickListener(new View.OnClickListener() {
@@ -66,7 +67,4 @@ public class SimpleButtonClickEventListener extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void aditya(View view) {
-
-    }
 }

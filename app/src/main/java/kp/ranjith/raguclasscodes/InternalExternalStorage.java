@@ -2,11 +2,12 @@ package kp.ranjith.raguclasscodes;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -29,22 +30,22 @@ public class InternalExternalStorage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_internal_external_storage);
 
-        editTextFileName=(EditText)findViewById(R.id.editText1);
-        editTextData=(EditText)findViewById(R.id.editText2);
-        saveInternalButton=(Button)findViewById(R.id.button1);
-        readinternalButton=(Button)findViewById(R.id.button2);
+        editTextFileName = findViewById(R.id.editText1);
+        editTextData = findViewById(R.id.editText2);
+        saveInternalButton = findViewById(R.id.button1);
+        readinternalButton = findViewById(R.id.button2);
 
-        saveExternalButton=(Button)findViewById(R.id.button14);
-        readExternalButton=(Button)findViewById(R.id.button17);
+        saveExternalButton = findViewById(R.id.button14);
+        readExternalButton = findViewById(R.id.button17);
 
         //Performing Action on Read Button
-        saveInternalButton.setOnClickListener(new View.OnClickListener(){
+        saveInternalButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
 
-                String filename=editTextFileName.getText().toString();
-                String data=editTextData.getText().toString();
+                String filename = editTextFileName.getText().toString();
+                String data = editTextData.getText().toString();
 
                 FileOutputStream fos;
                 try {

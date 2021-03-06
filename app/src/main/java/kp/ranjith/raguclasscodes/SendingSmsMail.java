@@ -2,26 +2,27 @@ package kp.ranjith.raguclasscodes;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class SendingSmsMail extends AppCompatActivity {
 
-    EditText editText1,editText2,editText3,editText4,editText5;
-    String number,smsmsg,mailid,mailsub,mailmsg;
+    EditText editText1, editText2, editText3, editText4, editText5;
+    String number, smsmsg, mailid, mailsub, mailmsg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sending_sms_mail);
-        editText1= (EditText) findViewById(R.id.editText);
-        editText2= (EditText) findViewById(R.id.editText2);
-        editText3= (EditText) findViewById(R.id.editText7);
-        editText4= (EditText) findViewById(R.id.editText8);
-        editText5= (EditText) findViewById(R.id.editText9);
+        editText1 = findViewById(R.id.editText);
+        editText2 = findViewById(R.id.editText2);
+        editText3 = findViewById(R.id.editText7);
+        editText4 = findViewById(R.id.editText8);
+        editText5 = findViewById(R.id.editText9);
     }
 
     public void sendsms(View view) {

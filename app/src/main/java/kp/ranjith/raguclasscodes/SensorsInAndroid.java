@@ -5,9 +5,10 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.List;
 
@@ -25,7 +26,7 @@ public class SensorsInAndroid extends AppCompatActivity {
         /* Get a SensorManager instance */
         sm = (SensorManager)getSystemService(SENSOR_SERVICE);
 
-        textView1 = (TextView)findViewById(R.id.textView1);
+        textView1 = findViewById(R.id.textView1);
 
         list = sm.getSensorList(Sensor.TYPE_ACCELEROMETER);
 
