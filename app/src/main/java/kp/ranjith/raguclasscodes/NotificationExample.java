@@ -6,6 +6,7 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 
@@ -20,9 +21,8 @@ public class NotificationExample extends AppCompatActivity {
         setContentView(R.layout.activity_notification_example);
     }
 
-
     public void shownvofn(View view) {
-
+//this code is for before Oreo
         // 1. create a Intent
         // 2. create a PendingIntent
         // 3. design Notification
@@ -60,7 +60,9 @@ public class NotificationExample extends AppCompatActivity {
         }
 
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(NotificationExample.this, channelId)
-                .setSmallIcon(android.R.drawable.ic_media_play).setContentTitle("ITM Reopened").setContentText("Start coming to college!!");
+                .setLargeIcon(BitmapFactory.decodeResource(NotificationExample.this.getResources(), R.drawable.logo))
+                .setSmallIcon(R.drawable.logo).setContentTitle("You can also 'Learn Android'")
+                .setContentText("Contact AndroidManifester today!!");
 
         Intent intent = new Intent(NotificationExample.this, MainActivity.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(NotificationExample.this, 0, intent, 0);

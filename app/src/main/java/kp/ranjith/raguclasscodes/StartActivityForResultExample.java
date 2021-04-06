@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -28,16 +29,18 @@ public class StartActivityForResultExample extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        Bitmap myBitmap;
 
-        if (requestCode == 66) {
 
-            Bitmap bitmap;
+        if (data == null) {
+            Toast.makeText(this, "nul", Toast.LENGTH_SHORT).show();
+        } else {
+            myBitmap = (Bitmap) data.getExtras().get("data");
 
-            bitmap = (Bitmap) data.getExtras().get("data");
-
-            imageView.setImageBitmap(bitmap);
+            imageView.setImageBitmap(myBitmap);
 
         }
+    }
 
     }
-}
+

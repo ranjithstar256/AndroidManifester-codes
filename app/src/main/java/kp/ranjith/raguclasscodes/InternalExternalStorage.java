@@ -1,6 +1,8 @@
 package kp.ranjith.raguclasscodes;
 
+import android.Manifest;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -8,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -37,6 +40,9 @@ public class InternalExternalStorage extends AppCompatActivity {
 
         saveExternalButton = findViewById(R.id.button14);
         readExternalButton = findViewById(R.id.button17);
+        ActivityCompat.requestPermissions(InternalExternalStorage.this,
+                new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+                1);
 
         //Performing Action on Read Button
         saveInternalButton.setOnClickListener(new View.OnClickListener() {
@@ -152,12 +158,37 @@ public class InternalExternalStorage extends AppCompatActivity {
                 }
                 Toast.makeText(getApplicationContext
 
-                        (),aBuffer,Toast.LENGTH_LONG).show();
+                        (), aBuffer, Toast.LENGTH_LONG).show();
 
             }
 
         });
     }
 
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String[] permissions, int[] grantResults) {
+        switch (requestCode) {
+            case 1: {
+
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                    // permission was granted, yay! Do the
+                    // contacts-related task you need to do.
+                } else {
+
+                    // permission denied, boo! Disable the
+                    // functionality that depends on this permission.
+                    Toast.makeText(InternalExternalStorage.this, "Permission denied to read your External storage", Toast.LENGTH_SHORT).show();
+                }
+                return;
+            }
+
+            // other 'case' lines to check for other
+            // permissions this app might request
+        }
+    }
 
 }

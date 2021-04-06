@@ -22,14 +22,9 @@ public class SensorsInAndroid extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sensors_in_android);
-
-        /* Get a SensorManager instance */
         sm = (SensorManager)getSystemService(SENSOR_SERVICE);
-
         textView1 = findViewById(R.id.textView1);
-
         list = sm.getSensorList(Sensor.TYPE_ACCELEROMETER);
-
         if(list.size()>0){
             sm.registerListener(sel, (Sensor) list.get(0), SensorManager.SENSOR_DELAY_NORMAL);
         }else{
@@ -40,9 +35,7 @@ public class SensorsInAndroid extends AppCompatActivity {
     SensorEventListener sel = new SensorEventListener(){
         public void onAccuracyChanged(Sensor sensor, int accuracy) {}
         public void onSensorChanged(SensorEvent event) {
-
             float[] values = event.values;
-
             textView1.setText("x: "+values[0]+"\ny: "+values[1]+"\nz: "+values[2]);
         }
     };

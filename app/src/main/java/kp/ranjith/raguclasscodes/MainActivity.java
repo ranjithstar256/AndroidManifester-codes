@@ -50,16 +50,19 @@ public class MainActivity extends AppCompatActivity {
             arrayList.add("Fragment with Navigation");//21
             arrayList.add("SQLite Database! CURD operation");//22
             arrayList.add("Web Based");//23
+            arrayList.add("RecyclerView");//24
+            arrayList.add("Retrofit Example");//25
+            arrayList.add("Ola Uber Swiggy\nLive location\nTracking");//26
 
 
-            arrayAdapter=new ArrayAdapter<String>(MainActivity.this,android.R.layout.simple_list_item_1,arrayList);
+            arrayAdapter = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_1, arrayList);
 
             lv.setAdapter(arrayAdapter);
 
             lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    Toast.makeText(MainActivity.this, "You have selected "+arrayList.get(position), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "You have selected " + arrayList.get(position), Toast.LENGTH_SHORT).show();
 
 
                     switch (position){
@@ -97,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
                             startActivity(new Intent(MainActivity.this,WifiBluetooth.class));
                             break;
                         case 11:
-                            startActivity(new Intent(MainActivity.this,MapsActivity.class));
+                            startActivity(new Intent(MainActivity.this, MapsExpl.class));
                             break;
                         case 12:
                             startActivity(new Intent(MainActivity.this,SharedPreferenceExample.class));
@@ -128,13 +131,30 @@ public class MainActivity extends AppCompatActivity {
 
                             break;
                         case 21:
-                            startActivity(new Intent(MainActivity.this,NavigationActivity.class));
+                            startActivity(new Intent(MainActivity.this, NavigationActivity.class));
                             break;
                         case 22:
-                            startActivity(new Intent(MainActivity.this,LoginActivity.class));
+                            startActivity(new Intent(MainActivity.this, LoginActivity.class));
                             break;
                         case 23:
-                            startActivity(new Intent(MainActivity.this,WebBased.class));
+                            startActivity(new Intent(MainActivity.this, WebBased.class));
+                            break;
+                        case 24:
+                            startActivity(new Intent(MainActivity.this, ReCycleViewExpl.class));
+                            break;
+                        case 25:
+                            startActivity(new Intent(MainActivity.this, SimpleRetrofitExpl.class));
+                            break;
+
+                        case 26:
+                            startActivity(new Intent(MainActivity.this, GmapLiveTracking.class));
+                            Toast.makeText(MainActivity.this, "it will keep updating when your location changes", Toast.LENGTH_LONG).show();
+                            break;
+
+                        // need to add service examples with it's types
+                        // content provider example
+                        // firebase examples (all whatever is possible)
+                        // social log in
 
                     }
                 }

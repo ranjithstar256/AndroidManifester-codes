@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,6 +7,39 @@
     android:layout_height="match_parent"
     tools:context="kp.ranjith.raguclasscodes.ListViewExample">
 
+    <ImageView
+        android:id="@+id/imageView3"
+
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:visibility="gone"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:fontFamily="@font/abril_fatface"
+        android:gravity="center"
+
+        android:text="AndroidManifester \n"
+
+        android:textColor="#9CCC65"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:fontFamily="@font/abril_fatface"
+
+        android:padding="2dp"
+        android:text="List of topics taught in the Android course\n\n ( Everything is hands training )\n"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textSize="24sp" />
 
     <ListView
         android:id="@+id/idlistv"
@@ -15,11 +47,14 @@
         android:layout_height="match_parent" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textViesdw"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:fontFamily="@font/abril_fatface"
         android:padding="2dp"
-        android:text="AndroidManifester Example Codes"
-        android:textColor="#7e35c2"
+        android:text="List of topics taught in the Android course\n\n ( Everything is hands training )\n"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
         android:textSize="24sp" />
+
 </LinearLayout>

@@ -3,11 +3,8 @@ package kp.ranjith.raguclasscodes;
 import android.content.Context;
 import android.media.MediaPlayer;
 import android.net.ConnectivityManager;
-import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.MediaController;
 import android.widget.Toast;
 import android.widget.VideoView;
 
@@ -15,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class AudioVideoExample extends AppCompatActivity {
     VideoView videoView;
-    String MY_VIDEO = "http://www.ebookfrenzy.com/android_book/movie.mp4";
+    String MY_VIDEO = "https://www.ebookfrenzy.com/android_book/movie.mp4";
     MediaPlayer mediaPlayer;
 
     @Override
@@ -46,22 +43,9 @@ public class AudioVideoExample extends AppCompatActivity {
         boolean internet = checkinternet(); // this is the coding for checking internet connection
 
                 if (internet) {
-                    try {
-                // Start the MediaController
 
-                MediaController mediacontroller = new MediaController(AudioVideoExample.this);
-                mediacontroller.setAnchorView(videoView);
-                // Get the URL from String VideoURL
-                Uri video = Uri.parse(MY_VIDEO);
-                videoView.setMediaController(mediacontroller);
-                videoView.setVideoURI(video);
-                videoView.start();
 
-            } catch (Exception e) {
-                Log.e("Error", e.getMessage());
-                e.printStackTrace();
-            }
-        }
+                }
         else {
             Toast.makeText(this, "Turn On Internet", Toast.LENGTH_SHORT).show();
         }
