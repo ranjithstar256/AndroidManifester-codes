@@ -12,13 +12,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class StartActivityForResultExample extends AppCompatActivity {
     ImageView imageView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_for_result_example);
         imageView = findViewById(R.id.imageView);
-
     }
 
     public void opencamm(View view) {
@@ -30,17 +28,12 @@ public class StartActivityForResultExample extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         Bitmap myBitmap;
-
-
         if (data == null) {
             Toast.makeText(this, "nul", Toast.LENGTH_SHORT).show();
         } else {
             myBitmap = (Bitmap) data.getExtras().get("data");
-
             imageView.setImageBitmap(myBitmap);
-
         }
     }
-
-    }
+}
 
