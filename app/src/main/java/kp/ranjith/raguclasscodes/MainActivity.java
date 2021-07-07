@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-
+//This is example
         ListView lv;
         ArrayList<String> arrayList;
         ArrayAdapter<String> arrayAdapter;
