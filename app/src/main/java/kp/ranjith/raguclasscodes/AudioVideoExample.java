@@ -3,8 +3,10 @@ package kp.ranjith.raguclasscodes;
 import android.content.Context;
 import android.media.MediaPlayer;
 import android.net.ConnectivityManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.MediaController;
 import android.widget.Toast;
 import android.widget.VideoView;
 
@@ -20,7 +22,7 @@ public class AudioVideoExample extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_audio_video_example);
 
-        mediaPlayer = MediaPlayer.create(AudioVideoExample.this, R.raw.abc); /// audio file name small letter
+        mediaPlayer = MediaPlayer.create(AudioVideoExample.this, R.raw.vanthematharam); /// audio file name small letter
         videoView = findViewById(R.id.videoView);
     }
 
@@ -43,11 +45,18 @@ public class AudioVideoExample extends AppCompatActivity {
         boolean internet = checkinternet(); // this is the coding for checking internet connection
 
                 if (internet) {
+                    Toast.makeText(AudioVideoExample.this, "Video starting.. please wait..", Toast.LENGTH_SHORT).show();
+                    VideoView videoview = (VideoView) findViewById(R.id.videoView);
+                    //Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.test);
 
+
+                    videoview.setVideoPath("https://p.urbanpro.com/tv-prod/video%2Fmember-video%2F2019456%2Fprocessed-video%2F25577-IIT+Hyderabad.mp4");
+                    videoview.setMediaController(new MediaController(AudioVideoExample.this));
+                    videoview.start();
 
                 }
         else {
-            Toast.makeText(this, "Turn On Internet", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Internet unavailable", Toast.LENGTH_SHORT).show();
         }
     }
 

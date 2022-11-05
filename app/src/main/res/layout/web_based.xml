@@ -34,10 +34,20 @@
         android:textSize="36dp"
         android:gravity="center"
         android:text="TextView" />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#3F51B5"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:text="the above data fetched from this API/URL \n
+https://mocki.io/v1/19154358-a8f2-4c39-8333-8e932f833873" />
 
     <ListView
         android:id="@+id/lis"
         android:layout_width="match_parent"
+        android:visibility="gone"
         android:layout_height="match_parent" />
 
 </LinearLayout>

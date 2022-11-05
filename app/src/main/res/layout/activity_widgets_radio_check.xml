@@ -5,13 +5,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="kp.ranjith.helloapp.Main3Activity">
+    tools:context=".WidgetsRadioCheck">
 
     <CheckBox
         android:id="@+id/checkBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CheckBox" />
+        android:text="Agreed to Terms and Conditions" />
 
     <RadioGroup
         android:id="@+id/rg"
@@ -21,25 +21,25 @@
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button1" />
+            android:text="Male" />
 
         <RadioButton
             android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button2" />
+            android:text="Female" />
 
         <RadioButton
             android:id="@+id/button3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button3" />
+            android:text="Transgender" />
     </RadioGroup>
 
     <Button
         android:id="@+id/button4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="Submit" />
 
 </LinearLayout>

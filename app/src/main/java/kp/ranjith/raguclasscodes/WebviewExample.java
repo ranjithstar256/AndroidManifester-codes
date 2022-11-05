@@ -24,7 +24,7 @@ public class WebviewExample extends AppCompatActivity {
 
         webView.setWebViewClient(new WebViewClient());
 
-        webView.loadUrl("https://www.androidmanifester.com");
+        webView.loadUrl("https://www.androidmanifester.in");
 
         webView.setWebChromeClient(new WebChromeClient() {
             private ProgressDialog mProgress;

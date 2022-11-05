@@ -1,26 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center_vertical"
     android:gravity="center"
+    android:background="#D87094"
     android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/androidmanifester" />
 
     <TextView
         android:id="@+id/textDia"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:textSize="32sp"
+        android:gravity="center"
         android:layout_toRightOf="@+id/imageDialog"
-        android:text="Example Dialog"
-        android:textColor="#000" />
+        android:text="Learn from AndroidManifester \n Mr K P Ranjith"
+        android:textColor="#FFEB3B" />
 
     <TextView
         android:id="@+id/textDialog"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:textSize="26sp"
+        android:gravity="center"
         android:layout_toRightOf="@+id/imageDialog"
-        android:text="www.AndroidManifester.com"
-        android:textColor="#000" />
+        android:text="www.AndroidManifester.in"
+        android:textColor="#122DC5" />
 
 
     <Button
@@ -31,6 +44,6 @@
         android:layout_marginRight="5dp"
         android:layout_marginTop="5dp"
         android:layout_toRightOf="@+id/imageDialog"
-        android:text=" Submit " />
+        android:text=" example button " />
 
 </LinearLayout>

@@ -19,7 +19,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText username, mPasswordView, ed3, ed4, ed5;
     Button mEmailSignInButton;
     TextView t1;
-    String s1,s2,s3,s4,s5;
+    String s1, s2, s3, s4, s5;
     DBHelper dbHelper;
 
     @Override
@@ -39,38 +39,28 @@ public class LoginActivity extends AppCompatActivity {
 
         dbHelper = new DBHelper(LoginActivity.this);
 
-
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                s1=username.getText().toString();
-                s2=mPasswordView.getText().toString();
-
-               long h = dbHelper.savedat(s1,s2);
-
-                Toast.makeText(LoginActivity.this, "save success "+h, Toast.LENGTH_SHORT).show();
+                s1 = username.getText().toString();
+                s2 = mPasswordView.getText().toString();
+                long h = dbHelper.savedat(s1, s2);
+                Toast.makeText(LoginActivity.this, "save success " + h, Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 
     public void retrv(View view) {
-        s3=ed3.getText().toString();
-
-       String s = dbHelper.getloc(s3);
-
+        s3 = ed3.getText().toString();
+        String s = dbHelper.getloc(s3);
         t1.setText(s);
-
     }
 
     public void updatedata(View view) {
-        s5=ed4.getText().toString();
-        s4=ed5.getText().toString();
-
-       int r =  dbHelper.updateval(s4,s5);
-
-        if(r==1){
+        s5 = ed4.getText().toString();
+        s4 = ed5.getText().toString();
+        int r = dbHelper.updateval(s4, s5);
+        if (r == 1) {
             Toast.makeText(this, "update success", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(this, "failed", Toast.LENGTH_SHORT).show();

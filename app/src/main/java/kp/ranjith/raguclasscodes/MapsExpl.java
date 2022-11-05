@@ -22,6 +22,7 @@ public class MapsExpl extends FragmentActivity implements OnMapReadyCallback {
     @Override
     public void onRequestPermissionsResult(int requestCode,
                                            String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         switch (requestCode) {
             case 1: {
 
@@ -35,7 +36,7 @@ public class MapsExpl extends FragmentActivity implements OnMapReadyCallback {
 
                     // permission denied, boo! Disable the
                     // functionality that depends on this permission.
-                    Toast.makeText(MapsExpl.this, "Permission denied to read your External storage", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MapsExpl.this, "Permission denied to read your location", Toast.LENGTH_SHORT).show();
                 }
                 return;
             }
@@ -84,7 +85,7 @@ public class MapsExpl extends FragmentActivity implements OnMapReadyCallback {
         mMap.setMyLocationEnabled(true);
         // Add a marker in Sydney and move the camera
         LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
+        mMap.addMarker(new MarkerOptions().position(sydney).title("Example Marker in Sydney"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
     }
 }

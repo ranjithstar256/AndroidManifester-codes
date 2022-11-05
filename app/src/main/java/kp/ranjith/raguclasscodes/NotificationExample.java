@@ -6,6 +6,7 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
@@ -62,10 +63,11 @@ public class NotificationExample extends AppCompatActivity {
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(NotificationExample.this, channelId)
                 .setLargeIcon(BitmapFactory.decodeResource(NotificationExample.this.getResources(), R.drawable.logo))
                 .setSmallIcon(R.drawable.logo).setContentTitle("You can also 'Learn Android'")
+                .setStyle(new NotificationCompat.BigPictureStyle().bigPicture( BitmapFactory.decodeResource(NotificationExample.this.getResources(),R.drawable.logo)))
                 .setContentText("Contact AndroidManifester today!!");
 
         Intent intent = new Intent(NotificationExample.this, MainActivity.class);
-        PendingIntent pendingIntent = PendingIntent.getActivity(NotificationExample.this, 0, intent, 0);
+        PendingIntent pendingIntent = PendingIntent.getActivity(NotificationExample.this, 0, intent, PendingIntent.FLAG_MUTABLE);
         mBuilder.setContentIntent(pendingIntent);
 
         notificationManager.notify(notificationId, mBuilder.build());

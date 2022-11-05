@@ -28,21 +28,21 @@ public class WidgetsRadioCheck extends AppCompatActivity {
                 switch (id) {
                     //add the different coding for diffrent cases
                     case R.id.button:
-                        Toast.makeText(WidgetsRadioCheck.this, "btn1", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(WidgetsRadioCheck.this, "Male", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.button2:
-                        Toast.makeText(WidgetsRadioCheck.this, "btn2", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(WidgetsRadioCheck.this, "Female", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.button3:
-                        Toast.makeText(WidgetsRadioCheck.this, "btn3", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(WidgetsRadioCheck.this, "Transgender", Toast.LENGTH_SHORT).show();
                         break;
                 }
 
                 if (cb.isChecked()) {
-                    Toast.makeText(WidgetsRadioCheck.this, "checkbox checked", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(WidgetsRadioCheck.this, "Terms Agreed", Toast.LENGTH_SHORT).show();
 
                 } else {
-                    Toast.makeText(WidgetsRadioCheck.this, "checkbox not checked", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(WidgetsRadioCheck.this, "Terms not Agreed", Toast.LENGTH_SHORT).show();
                 }
             }
         });

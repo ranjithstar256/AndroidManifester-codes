@@ -22,6 +22,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    namespace 'kp.ranjith.raguclasscodes'
 }
 
 dependencies {
@@ -36,5 +37,8 @@ dependencies {
     implementation 'com.google.android.libraries.maps:maps:3.1.0-beta'
     implementation 'com.google.android.gms:play-services-location:20.0.0'
     implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'com.google.android.gms:play-services-auth:20.3.0'
+
+    implementation 'com.google.android.gms:play-services-auth-api-phone:18.0.1'
 
 }

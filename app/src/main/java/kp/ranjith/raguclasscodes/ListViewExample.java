@@ -30,6 +30,8 @@ public class ListViewExample extends AppCompatActivity {
         //sp=(Spinner)findViewById(R.id.spinner);   // in the ui delete the listview add add spinner
 
         arrayList=new ArrayList<>();
+        arrayList.add("ranjith");
+        arrayList.add("AndroidManifester");
         arrayList.add("ramu");
         arrayList.add("somu");
         arrayList.add("kumar");
@@ -37,10 +39,14 @@ public class ListViewExample extends AppCompatActivity {
         arrayList.add("suresh");
         arrayList.add("raju");
         arrayList.add("haran");
+        arrayList.add("ranjith");
+        arrayList.add("AndroidManifester");
         arrayList.add("siva");
         arrayList.add("ramu");
         arrayList.add("somu");
         arrayList.add("kumar");
+        arrayList.add("ranjith");
+        arrayList.add("AndroidManifester");
         arrayList.add("rajesh");
         arrayList.add("suresh");
         arrayList.add("raju");
@@ -68,15 +74,14 @@ public class ListViewExample extends AppCompatActivity {
             }
         });
 
-        /* //for gridview
-        gv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+         //for gridview
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(ListViewExample.this, "You have selected "+arrayList.get(position), Toast.LENGTH_SHORT).show();
             }
         });
 
-        */
 
         /* // for spinner
         sp.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

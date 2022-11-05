@@ -7,23 +7,58 @@
     android:orientation="vertical"
     tools:context="kp.ranjith.raguclasscodes.DataTimePicker">
 
-    <Button
-        android:id="@+id/button"
-        android:onClick="datee"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Date" />
+        android:orientation="horizontal">
 
-    <Button
-        android:onClick="timee"
-        android:id="@+id/button2"
+        <EditText
+            android:id="@+id/editTextTextPersonName2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:enabled="false"
+            android:inputType="textPersonName"
+            android:hint="selected date here" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="datee"
+
+            android:text="Date" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Time" />
+        android:orientation="horizontal">
 
-        <is.arontibo.library.ElasticDownloadView
+        <EditText
+            android:id="@+id/editTextTextPersonName3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:enabled="false"
+
+            android:inputType="textPersonName"
+            android:hint="selected time here" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="timee"
+            android:text="Time" />
+    </LinearLayout>
+
+    <is.arontibo.library.ElasticDownloadView
         android:id="@+id/elastic_download_view"
         android:layout_width="wrap_content"
+            android:visibility="gone"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"/>
 

@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             arrayList=new ArrayList<String>();
-            arrayList.add("Simple Button Click Event");//0
+            arrayList.add("Simple Button Click Event and Menu Example");//0
             arrayList.add("Getting data from EditText");//1
             arrayList.add("Passing Data Between Activity");//2
             arrayList.add("ListView Example");//3
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
             arrayList.add("Fragment Example");//20
             arrayList.add("Fragment with Navigation");//21
             arrayList.add("SQLite Database! CURD operation");//22
-            arrayList.add("Web Based");//23
+            arrayList.add("Internet Based App - Getting data from API/URL using REST API");//23
             arrayList.add("RecyclerView");//24
             arrayList.add("Retrofit Example");//25
             arrayList.add("Ola Uber Swiggy\nLive location\nTracking");//26

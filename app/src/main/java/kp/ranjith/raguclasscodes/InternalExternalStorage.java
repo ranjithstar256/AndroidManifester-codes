@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -43,6 +44,11 @@ public class InternalExternalStorage extends AppCompatActivity {
         ActivityCompat.requestPermissions(InternalExternalStorage.this,
                 new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
                 1);
+
+        if (!isExternalStorageAvailable() || isExternalStorageReadOnly()) {
+            saveExternalButton.setEnabled(false);
+            Toast.makeText(this, "Storage unavailable", Toast.LENGTH_SHORT).show();
+        }
 
         //Performing Action on Read Button
         saveInternalButton.setOnClickListener(new View.OnClickListener() {
@@ -110,11 +116,15 @@ public class InternalExternalStorage extends AppCompatActivity {
                 String data=editTextData.getText().toString();
 
                 try {
-                    File myFile = new File("/sdcard/"+filename);
+                    //File myFile = new File("/sdcard/"+filename);
+                   /// File myFile = new File(Environment.getExternalStorageState()+filename);
 
-                    myFile.createNewFile();
+                    File directory = getFilesDir(); //or getExternalFilesDir(null); for external storage
+                    File file = new File(directory, filename);
 
-                    FileOutputStream fOut = new FileOutputStream(myFile);
+                    file.createNewFile();
+
+                    FileOutputStream fOut = new FileOutputStream(file);
 
                     OutputStreamWriter myOutWriter = new
 
@@ -139,12 +149,18 @@ public class InternalExternalStorage extends AppCompatActivity {
             @Override
             public void onClick(View arg0) {
                 String filename=editTextFileName.getText().toString();
-                StringBuffer stringBuffer = new StringBuffer();
+
                 String aDataRow = "";
                 String aBuffer = "";
                 try {
-                    File myFile = new File("/sdcard/"+filename);
-                    FileInputStream fIn = new FileInputStream(myFile);
+                    //File myFile = new File("/sdcard/"+filename);
+//                    File myFile = new File(getFilesDir()+filename);
+
+                    File directory = getFilesDir(); //or getExternalFilesDir(null); for external storage
+                    File file = new File(directory, filename);
+
+
+                    FileInputStream fIn = new FileInputStream(file);
                     BufferedReader myReader = new BufferedReader(
                             new InputStreamReader(fIn));
 
@@ -165,9 +181,24 @@ public class InternalExternalStorage extends AppCompatActivity {
         });
     }
 
+    private static boolean isExternalStorageReadOnly() {
+        String extStorageState = Environment.getExternalStorageState();
+        if (Environment.MEDIA_MOUNTED_READ_ONLY.equals(extStorageState)) {
+            return true;
+        }
+        return false;
+    }
+
+    private static boolean isExternalStorageAvailable() {
+        String extStorageState = Environment.getExternalStorageState();
+        if (Environment.MEDIA_MOUNTED.equals(extStorageState)) {
+            return true;
+        }
+        return false;
+    }
     @Override
-    public void onRequestPermissionsResult(int requestCode,
-                                           String[] permissions, int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode,String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         switch (requestCode) {
             case 1: {
 
