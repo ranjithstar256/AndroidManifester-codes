@@ -21,10 +21,13 @@ import kp.ranjith.raguclasscodes.R;
 
 public class MainActivity extends AppCompatActivity {
 
+    Task singletask;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+        singletask= new Task();
     }
 
     public void sa(View view) {
@@ -51,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
             //adding to database
             DatabaseClientt.getInstance(getApplicationContext()).getAppDatabase().taskDao().insert(task);
+         singletask=   DatabaseClientt.getInstance(getApplicationContext()).getAppDatabase().taskDao().getdesktn("buy home");
             return null;
         }
 
@@ -58,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(Void aVoid) {//3
             super.onPostExecute(aVoid);
             Toast.makeText(getApplicationContext(), "Saved", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), ""+singletask.getDesc(), Toast.LENGTH_LONG).show();
         }
     }
 
