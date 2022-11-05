@@ -78,6 +78,7 @@
         <activity android:name=".BroadcastReceiverExample" />
         <activity android:name=".AndroidServiceExample" />
         <activity android:name=".FragmentsExample" />
+        <activity android:name="kp.ranjith.notesroom.MainActivity" />
         <activity android:name=".SharedPreferenceExample" />
         <activity android:name=".InternalExternalStorage" />
         <activity android:name=".WebBased" />
