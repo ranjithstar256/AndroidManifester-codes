@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
             arrayList.add("Retrofit Example");//25
             arrayList.add("Ola Uber Swiggy\nLive location\nTracking");//26
             arrayList.add("Work Manager Example");//27
+            arrayList.add("Simple ROOM Database Example");//28
 
 
             arrayAdapter = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_1, arrayList);
@@ -156,6 +157,11 @@ public class MainActivity extends AppCompatActivity {
 
                         case 27:
                             startActivity(new Intent(MainActivity.this, WorkMngrExpl.class));
+                            //Toast.makeText(MainActivity.this, "", Toast.LENGTH_LONG).show();
+                            break;
+
+                        case 28:
+                            startActivity(new Intent(MainActivity.this, kp.ranjith.notesroom.MainActivity.class));
                             //Toast.makeText(MainActivity.this, "", Toast.LENGTH_LONG).show();
                             break;
 
