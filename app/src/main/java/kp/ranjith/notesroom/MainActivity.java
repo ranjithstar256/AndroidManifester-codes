@@ -4,6 +4,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -22,15 +23,31 @@ import kp.ranjith.raguclasscodes.R;
 public class MainActivity extends AppCompatActivity {
 
     Task singletask;
+    EditText e,f,g;
+    String se,sf,sg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+        e=findViewById(R.id.editTextTextPersonName4);
+        f=findViewById(R.id.editTextTextPersonName5);
+        g=findViewById(R.id.editTextTextPersonName6);
         singletask= new Task();
     }
 
+    public void ra(View view) {
+        se= e.getText().toString();
+        sf= f.getText().toString();
+        sg= g.getText().toString();
+        RetriveTask st = new RetriveTask();
+        st.execute();
+    }
+
     public void sa(View view) {
+        se= e.getText().toString();
+        sf= f.getText().toString();
+        sg= g.getText().toString();
         SaveTask st = new SaveTask();
         st.execute();
     }
@@ -47,14 +64,13 @@ public class MainActivity extends AppCompatActivity {
 
             //creating a task
             Task task = new Task();
-            task.setTask("buy home");
-            task.setDesc("with dog");
-            task.setFinishBy("this week");
+            task.setTask(se);
+            task.setDesc(sg);
+            task.setFinishBy(sf);
             task.setFinished(false);
 
             //adding to database
             DatabaseClientt.getInstance(getApplicationContext()).getAppDatabase().taskDao().insert(task);
-         singletask=   DatabaseClientt.getInstance(getApplicationContext()).getAppDatabase().taskDao().getdesktn("buy home");
             return null;
         }
 
@@ -62,6 +78,34 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(Void aVoid) {//3
             super.onPostExecute(aVoid);
             Toast.makeText(getApplicationContext(), "Saved", Toast.LENGTH_LONG).show();
+        }
+    }
+    class RetriveTask extends AsyncTask<Void, Void, Void> {
+
+        @Override
+        protected void onPreExecute() { //1
+            super.onPreExecute();
+        }
+
+        @Override
+        protected Void doInBackground(Void... voids) {//2
+
+            //creating a task
+            Task task = new Task();
+            task.setTask(se);
+            task.setDesc(sg);
+            task.setFinishBy(sf);
+            task.setFinished(false);
+
+            //adding to database
+
+         singletask=   DatabaseClientt.getInstance(getApplicationContext()).getAppDatabase().taskDao().getdesktn(se);
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {//3
+            super.onPostExecute(aVoid);
             Toast.makeText(getApplicationContext(), ""+singletask.getDesc(), Toast.LENGTH_LONG).show();
         }
     }
