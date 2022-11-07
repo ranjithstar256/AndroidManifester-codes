@@ -20,12 +20,19 @@
         android:allowBackup="true"
         android:icon="@drawable/logo"
         android:label="AndroidManifester"
+        android:preserveLegacyExternalStorage="true"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:requestLegacyExternalStorage="true"
-        android:preserveLegacyExternalStorage="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GmapLiveTracking"></activity>
+        <activity
+            android:name=".WorkMngrExpl"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity android:name=".GmapLiveTracking" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -50,7 +57,8 @@
             android:label="@string/title_activity_maps_expl" />
         <activity android:name=".SimpleRetrofitExpl" />
         <activity android:name=".ReCycleViewExpl" />
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

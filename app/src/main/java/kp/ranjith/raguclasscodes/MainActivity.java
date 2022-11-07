@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
             arrayList.add("RecyclerView");//24
             arrayList.add("Retrofit Example");//25
             arrayList.add("Ola Uber Swiggy\nLive location\nTracking");//26
+            arrayList.add("Work Manager Example");//27
 
 
             arrayAdapter = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_1, arrayList);
@@ -150,11 +151,13 @@ public class MainActivity extends AppCompatActivity {
                             startActivity(new Intent(MainActivity.this, GmapLiveTracking.class));
                             Toast.makeText(MainActivity.this, "it will keep updating when your location changes", Toast.LENGTH_LONG).show();
                             break;
+                        case 27:
+                            startActivity(new Intent(MainActivity.this, WorkMngrExpl.class));
+                            //Toast.makeText(MainActivity.this, "", Toast.LENGTH_LONG).show();
+                            break;
 
-                        // need to add service examples with it's types
                         // content provider example
                         // firebase examples (all whatever is possible)
-                        // social log in
 
                     }
                 }

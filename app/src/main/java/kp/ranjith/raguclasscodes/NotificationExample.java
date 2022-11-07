@@ -32,7 +32,7 @@ public class NotificationExample extends AppCompatActivity {
 
         Intent intent = new Intent(NotificationExample.this, NotificationExample.class);
 
-        PendingIntent pendingIntent = PendingIntent.getActivity(NotificationExample.this, 0, intent, 0);
+        PendingIntent pendingIntent = PendingIntent.getActivity(NotificationExample.this, 0, intent, PendingIntent.FLAG_MUTABLE);
 
         Notification notification = new Notification.Builder(NotificationExample.this).setSmallIcon(android.R.drawable.ic_media_play)
                 .setContentTitle("New message received")
