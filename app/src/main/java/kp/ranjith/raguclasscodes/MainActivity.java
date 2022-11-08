@@ -12,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
+import kp.ranjith.s3_v2_viewmodeldemo.MainActivity2;
+
 public class MainActivity extends AppCompatActivity {
 //This is example
         ListView lv;
@@ -55,8 +57,8 @@ public class MainActivity extends AppCompatActivity {
             arrayList.add("Ola Uber Swiggy\nLive location\nTracking");//26
             arrayList.add("Work Manager Example");//27
             arrayList.add("Simple ROOM Database Example");//28
-
-
+            arrayList.add("Livedata Example");//29
+            arrayList.add("MVVM Example");//30
 
 
             arrayAdapter = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_1, arrayList);
@@ -165,6 +167,16 @@ public class MainActivity extends AppCompatActivity {
                         case 28:
                             startActivity(new Intent(MainActivity.this, kp.ranjith.notesroom.MainActivity.class));
                             //Toast.makeText(MainActivity.this, "", Toast.LENGTH_LONG).show();
+                            break;
+
+                        case 29:
+                            startActivity(new Intent(MainActivity.this, MainActivity2.class));
+                            //Toast.makeText(MainActivity.this, "", Toast.LENGTH_LONG).show();
+                            break;
+
+                        case 30:
+                            startActivity(new Intent(MainActivity.this, kp.ranjith.s3_v2_viewmodeldemo.MainActivity.class));
+                            Toast.makeText(MainActivity.this, "even if rotate the device , data is not lost", Toast.LENGTH_LONG).show();
                             break;
 
                         // content provider example

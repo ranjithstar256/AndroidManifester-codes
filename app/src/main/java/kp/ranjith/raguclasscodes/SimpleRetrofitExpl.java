@@ -13,6 +13,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+/* this code example is from Simplified coding Belal Khan bro! Credits to him :) I use some more code examples of him as well */
+
 public class SimpleRetrofitExpl extends AppCompatActivity {
     ListView listView;
 
