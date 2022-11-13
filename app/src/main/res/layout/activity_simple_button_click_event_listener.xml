@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context="kp.ranjith.raguclasscodes.SimpleButtonClickEventListener">
+    tools:context="kp.ranjith.ranjithclasscodes.SimpleButtonClickEventListener">
 
     <Button
         android:id="@+id/button"

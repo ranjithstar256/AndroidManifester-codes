@@ -8,12 +8,12 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
-import kp.ranjith.raguclasscodes.R;
+import kp.ranjith.ranjithclasscodes.R;
+
 
 public class MainActivity extends AppCompatActivity {
 

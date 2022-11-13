@@ -6,7 +6,7 @@
     android:layout_gravity="center"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context="kp.ranjith.raguclasscodes.SensorsInAndroid">
+    tools:context="kp.ranjith.ranjithclasscodes.SensorsInAndroid">
 
     <TextView
         android:id="@+id/textView1"

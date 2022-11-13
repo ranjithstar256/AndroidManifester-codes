@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="kp.ranjith.raguclasscodes.DestinationActivity">
+    tools:context="kp.ranjith.ranjithclasscodes.DestinationActivity">
 
     <TextView
         android:id="@+id/textView2"

@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AndroidManifester-codes.iml" filepath="$PROJECT_DIR$/.idea/modules/AndroidManifester-codes.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AndroidManifester-codes.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AndroidManifester-codes.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AndroidManifester-codes.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AndroidManifester-codes.app.androidTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AndroidManifester-codes.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AndroidManifester-codes.app.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AndroidManifester-codes.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AndroidManifester-codes.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AndroidManifester-codesNew.iml" filepath="$PROJECT_DIR$/.idea/modules/AndroidManifester-codesNew.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AndroidManifester-codesNew.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AndroidManifester-codesNew.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AndroidManifester-codesNew.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AndroidManifester-codesNew.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AndroidManifester-codesNew.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AndroidManifester-codesNew.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AndroidManifester-codesNew.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AndroidManifester-codesNew.app.unitTest.iml" />
     </modules>
   </component>
 </project>

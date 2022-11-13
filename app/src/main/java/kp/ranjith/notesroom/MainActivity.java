@@ -2,23 +2,14 @@ package kp.ranjith.notesroom;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;/*
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;*/
+import kp.ranjith.ranjithclasscodes.R;
 
-import kp.ranjith.raguclasscodes.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -91,11 +82,11 @@ public class MainActivity extends AppCompatActivity {
         protected Void doInBackground(Void... voids) {//2
 
             //creating a task
-            Task task = new Task();
-            task.setTask(se);
-            task.setDesc(sg);
-            task.setFinishBy(sf);
-            task.setFinished(false);
+//            Task task = new Task();
+//            task.setTask(se);
+//            task.setDesc(sg);
+//            task.setFinishBy(sf);
+//            task.setFinished(false);
 
             //adding to database
 

@@ -6,7 +6,7 @@
     android:gravity="center"
     android:layout_gravity="center"
     android:background="#FFFFFF"
-    tools:context="kp.ranjith.raguclasscodes.SecondFragment">
+    tools:context="kp.ranjith.ranjithclasscodes.SecondFragment">
 
     <TextView
         android:id="@+id/textView5"

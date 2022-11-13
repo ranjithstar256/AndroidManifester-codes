@@ -12,7 +12,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
 
-import kp.ranjith.raguclasscodes.R;
+import kp.ranjith.ranjithclasscodes.R;
+
+
 /*
 This code example is from Smartherd , credits to them.
 */

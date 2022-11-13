@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
     android:gravity="center"
-    tools:context="kp.ranjith.raguclasscodes.AnimationInAndroid">
+    tools:context="kp.ranjith.ranjithclasscodes.AnimationInAndroid">
 
     <ImageView
         android:id="@+id/imageView2"

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="18"
-    tools:context="kp.ranjith.raguclasscodes.SimpleAlertDialog">
+    tools:context="kp.ranjith.ranjithclasscodes.SimpleAlertDialog">
 
     <Button
         android:id="@+id/button8"

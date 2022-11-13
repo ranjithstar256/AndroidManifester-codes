@@ -8,25 +8,25 @@
     android:orientation="vertical"
     android:weightSum="30"
     android:layout_height="match_parent"
-    tools:context="kp.ranjith.raguclasscodes.FragmentsExample">
+    tools:context="kp.ranjith.ranjithclasscodes.FragmentsExample">
 
     <fragment
         android:id="@+id/fragment"
         android:layout_weight="10"
-        android:name="kp.ranjith.raguclasscodes.FirstFragment"
+        android:name="kp.ranjith.ranjithclasscodes.FirstFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <fragment
         android:id="@+id/fragment2"
-        android:name="kp.ranjith.raguclasscodes.SecondFragment"
+        android:name="kp.ranjith.ranjithclasscodes.SecondFragment"
         android:layout_width="match_parent"         android:layout_weight="10"
 
         android:layout_height="wrap_content" />
 
     <fragment
         android:id="@+id/fragment3"
-        android:name="kp.ranjith.raguclasscodes.ThirdFragment"
+        android:name="kp.ranjith.ranjithclasscodes.ThirdFragment"
         android:layout_width="match_parent"         android:layout_weight="10"
 
         android:layout_height="wrap_content" />

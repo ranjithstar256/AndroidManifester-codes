@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="kp.ranjith.raguclasscodes.StartActivityForResultExample">
+    tools:context="kp.ranjith.ranjithclasscodes.StartActivityForResultExample">
 
     <Button
         android:id="@+id/button7"
