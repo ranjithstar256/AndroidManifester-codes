@@ -37,7 +37,7 @@
         android:fontFamily="@font/abril_fatface"
 
         android:padding="2dp"
-        android:text="List of topics taught in the Android course\n\n ( Everything is hands training )\n"
+        android:text="List of topics taught in the Android course\n\n ( Everything is hands on training )\n"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
         android:textSize="24sp" />
 
